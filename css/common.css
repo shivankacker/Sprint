@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+@font-face {
+    font-family: bold;
+    src: url('../med/fonts/OTF/CodeDemo-Bold.otf');
+}
+@font-face {
+    font-family: regular;
+    src: url('../med/fonts/OTF/CodeDemo-Light.otf');
+}
+body, html{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    background: black;
+}
+body{
+    font-family: regular;
+}
+.nml-landing{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: rgb(6, 6, 6);
+    background-position: center;
+    background-size: cover;
+}
+.n-landing-bg{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    backdrop-filter: blur(20px);
+    z-index: 1;
+}
+.n-landing-fr{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    padding: 100px;
+    
+    
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.n-title{
+    font-size: 90px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: bold;
+}
+.n-subtitle{
+    font-size: 25px;
+}

@@ -1,0 +1,8 @@
+:.nml-landing
+    :.n-landing-bg
+    :.n-landing-fr
+        :div
+            :.n-title
+                What if markup could be much simpler?
+            :.n-subtitle onclick="alert('mouse')"
+                Stay tuned to find out

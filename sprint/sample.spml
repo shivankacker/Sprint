@@ -1,0 +1,11 @@
+:#main style="display:flex;align-items:center;text-align:center;justify-content:center;" height="100vh"
+    :.main-wrapper
+        :h1
+            This looks like a normal webpage, built with normal HTML.
+
+        :span.sample-span font-size="20px" color="red"
+            But what if I say otherwise?
+
+        :br
+
+        :img src="rock.jpg" width="250px"
