@@ -1,11 +1,14 @@
 # Sprint
- 
- Sprint, as the name suggests, is a markup language that can be written blazingly faster than its alternatives.
- Sprint revises how one writes HTML for webpages and eliminates the use of tag breaks and class and id declaration as properties. Each code block is identified with it's indentation level.
 
- ## Example
+![logo](https://cdn.discordapp.com/attachments/656529142166323202/955886898902081596/sprint_200.png)
 
- Here is some sample Sprint code along with what it displays on the web page
+<br> 
+Sprint, as the name suggests, is a markup language that can be written blazingly faster than its alternatives.
+Sprint revises how one writes HTML for webpages and eliminates the use of tag breaks and class and id declaration as properties. Each code block is identified with it's indentation level.
+
+## Example
+
+Here is some sample Sprint code along with what it displays on the web page
 
  ```
 :#main style = "display:flex;align-items:center;text-align:center;justify-content:center;height:100vh;"
@@ -47,7 +50,7 @@ In the project directory, create a file called `test.spml`.
 Sprint can only be loaded as a component for now. To create a component, go back to `index.html` and add the following
 
 ```
-<div __Sprint_dev = "test">
+<div __sprint_dev = "test">
 </div>
 ```
 This creates a dev component that hot reloads with changes. For production, remove the "_dev".

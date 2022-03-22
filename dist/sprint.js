@@ -44,10 +44,13 @@ const sprint = {
         if(flag){
             return sprint.parse(sprint.cache[newId]);
         }
-        
+        //startRefreshes();
     },
     createSandBox: () => {
         const aID = sprint.sandBoxID;
+        if($('#'+aID).length > 0){
+            $('')
+        }
         $('body').append(`
             <div id="${aID}" style="display:none;">
             </div>
@@ -199,10 +202,10 @@ const sprint = {
             $(this).removeAttr('__sprintID').removeAttr('__sprintLevel').removeAttr('undefined').removeAttr('__sprintString');
         });
 
-
-        
         sand = sandBox.html();
+
         sprint.terminateSandBox();
+        
         return sand;
     },
     get: function(fName){
@@ -345,14 +348,6 @@ $(window).on('load',()=>{
     const identifier = sprint.element_identifier;
     const dev_identifier = sprint.element_dev_identifier;
     const dev_elements = $(`[${dev_identifier}]`);
-    setInterval(() => {
-        dev_elements.each(function(){
-            let url = $(this).attr(dev_identifier);
-            $(this).html(
-                sprint.checkRefresh(url)
-            );   
-        });
-    }, 100);
 
     
     $(`[${identifier}]`).each(function(){
@@ -365,4 +360,21 @@ $(window).on('load',()=>{
     if(dev_elements.length){
         console.warn('You are fetching Sprint components in dev mode. This is not suitable for production. Change the "__sprint_dev" attribute to "__sprint" to use for production');
     }
+
+    startRefreshes();
 });
+
+const startRefreshes = () => {
+    setInterval(() => {
+        let dev_identifier = sprint.element_dev_identifier;
+        let dev_elements = $(`[${dev_identifier}]`).not('[__sprint_init]');
+        dev_elements.each(function(){
+            let url = $(this).attr(dev_identifier);
+            //$(this).attr('__sprint_init','');
+            $(this).html(
+                sprint.checkRefresh(url)
+            );
+
+        });
+    }, 100);   
+}
