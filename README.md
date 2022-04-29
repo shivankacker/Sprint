@@ -41,13 +41,13 @@ Put this in `index.html`
 
 ### Creating an Sprint file
 
-In the project directory, create a file called `test.spml`.
+In the project directory, create a file called `test.spr`.
 <br>
-`.spml` is the file extension for all Sprint files. Put your Sprint code in this file.
+`.spr` is the file extension for all Sprint files. Put your Sprint code in this file.
 
 ### Loading the Sprint file
 
-Sprint can only be loaded as a component for now. To create a component, go back to `index.html` and add the following
+Sprint can only be loaded as a component for now. To create a component, go back to `index.spr` and add the following
 
 ```
 <div __sprint_dev = "test">
@@ -55,7 +55,7 @@ Sprint can only be loaded as a component for now. To create a component, go back
 ```
 This creates a dev component that hot reloads with changes. For production, remove the "_dev".
 
-Now, the file `test.spml` will be printed to the initialized element in `index.html`
+Now, the file `test.spr` will be printed to the initialized element in `index.html`
 
 ## Syntax
 
@@ -84,7 +84,7 @@ Sprint is currently a mere proof of concept, and has certain limitations.
 
 ### **Native Loading**
 
-Currently, Sprint loads an external spml file through ajax, parses it, and prints it in html form into an element on the webpage. This is possible to counter, by parsing and displaying it as html through server side javascript.
+Currently, Sprint loads an external spr file through ajax, parses it, and prints it in html form into an element on the webpage. This is possible to counter, by parsing and displaying it as html through server side javascript.
 
 ### **No Embeds**
 

@@ -17,7 +17,7 @@ const sprint = {
             async: false,
             type: 'GET',
             cache: false,
-            url: url+'.spml',
+            url: url+'.spr',
             success: function(data) {
                sprint.cache[cacheName] = data;
             }
@@ -32,7 +32,7 @@ const sprint = {
             async: false,
             type: 'GET',
             cache: false,
-            url: url+'.spml',
+            url: url+'.spr',
             success: function(data) {
                 if(sprint.lastRefreshData[url] != data){
                     sprint.lastRefreshData[url] = data;

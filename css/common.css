@@ -13,9 +13,9 @@ body, html{
     color: white;
     background: black;
 }
-body{
+/*body{
     font-family: regular;
-}
+}*/
 .nml-landing{
     height: 100vh;
     display: flex;
